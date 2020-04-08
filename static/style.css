@@ -1,0 +1,73 @@
+h1, h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body {
+  background-image: url("bgimg3.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+.left-div {
+  width: 25%;
+  float: left;
+}
+.center-div{
+width: 50%;
+
+ float: left;
+
+}
+.right-div {
+  width: 25%;
+  
+}​​
+
+.row {
+    transform: translate(0px, 0px);
+}
+
+
+
+svg {
+  font: 10px sans-serif;
+  padding: 10px;
+  transform: translate(0px,15px);
+
+}
+
+.axis,
+.frame {
+  shape-rendering: crispEdges;
+}
+
+.axis line {
+  stroke: #ddd;
+}
+
+
+.axis path {
+  display: none;
+}
+
+.cell text {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.frame {
+  fill: none;
+  stroke: #aaa;
+}
+
+circle {
+  fill-opacity: .7;
+}
+p{
+	font-size: 20px;
+	font-family: "Optima";
+    text-align: center;
+}
+

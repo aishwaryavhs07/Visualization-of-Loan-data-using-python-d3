@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static', filename='style.css') }}">
+</head>
+<body align ="center">
+    <h1 align="center"><font color="#0C595D"> LOAN DATA VISUALIZATION</font></h1>
+ <div class="row" align="center">
+    <span class="left-div">
+        <p ><font color="#0C595D" >Select a plot for the original data</font></p>
+       <select id="org_options" style="width: 200px; height: 20px">
+           <option selected="select">Select a Plot</option>
+           <option value="scree">Scree plot before sampling</option>
+           <option value="orgprojection">Data Projected into top 2 PCA vectors scatterplot</option>
+           <option value="orgeuc">MDS Euclidean scatter plot</option>
+           <option value="orgcorr">MDS Correlation scatter plot</option>
+           <option value="orghigh">Three highest PCA loaded attributes scatter plot</option> 
+       </select>
+    </span>
+     <span class="center-div">
+         <p ><font color="#0C595D" >Select a plot for the random sampled data</font></p>
+        <select id="random_options" style="width: 200px; height: 20px">
+            <option selected="select">Select a Plot</option>
+            <option value="scree_random">Scree plot for random sampling</option>
+            <option value="projection1">Data Projected into top 2 PCA vectors scatterplot</option>
+            <option value="euc_rand">MDS Euclidean scatter plot</option>
+            <option value="corr_rand">MDS Correlation scatter plot</option>
+            <option value="high1">Three highest PCA loaded attributes scatter plot</option>
+        </select>
+     </span>
+     <span class="right-div">
+         <p ><font color="#0C595D" >Select a plot for the stratified sampled data</font></p>
+        <select id="strat_options" style="width: 200px; height: 20px">
+            <option selected="select">Select a Plot</option>
+            <option value="scree2">Scree plot for stratified sampling</option>
+            <option value="projection2">Data Projected into top 2 PCA vectors scatterplot</option>
+            <option value="euc_strat">MDS Euclidean scatter plot</option>
+            <option value="corr_strat">MDS Correlation scatter plot</option>
+            <option value="high_strat">Three highest PCA loaded attributes scatter plot</option>
+        </select>
+     </span>
+     <p><br/><br/><br/><br/></p>
+     <p ><font color="#A73FC2" id="displaytext"><b> </b></font></p>
+ </div>
+<div id = "error"></div>
+<script src = "{{ url_for('static', filename='d3.min.js')}}"></script>
+<script src = "{{ url_for('static', filename='jquery.min.js')}}"></script>
+<script src = "{{ url_for('static', filename='index.js')}}"></script>
+<style src = "{{ url_for('static', filename='style.css')}}"></style>
+</body>
+</html>
